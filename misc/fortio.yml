@@ -9,6 +9,9 @@ spec:
       labels:
         app: fortio
     spec:
+      selector:
+        matchLabels:
+          app: fortio
       containers:
       - name: fortio
         image: fortio/fortio:latest_release
