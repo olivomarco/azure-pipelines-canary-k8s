@@ -4,14 +4,14 @@ metadata:
   name: fortio
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: fortio
   template:
     metadata:
       labels:
         app: fortio
     spec:
-      selector:
-        matchLabels:
-          app: fortio
       containers:
       - name: fortio
         image: fortio/fortio:latest_release
